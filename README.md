@@ -1,36 +1,46 @@
 # Codon Usage Analysis of Tuberculosis Resistance Genes
 
-This project analyzes the **codon usage bias** in three key *Mycobacterium tuberculosis* antibiotic resistance genes: **katG**, **inhA**, and **rpoB**. Codon usage can reflect evolutionary adaptations and can impact gene expression efficiency, which is crucial for understanding bacterial resistance mechanisms.
+This project performs **codon usage bias analysis** on three essential *Mycobacterium tuberculosis* resistance genes: `katG`, `rpoB`, and `inhA`. These genes are associated with resistance to first-line anti-TB drugs like isoniazid and rifampicin.
+
+Using **Biopython** and **Matplotlib**, codon frequencies are computed and visualized to understand codon preference, which may reflect gene expression patterns or evolutionary pressure in *M. tuberculosis*.
+
+---
 
 ## 🔬 Genes Analyzed
-- **katG** – associated with isoniazid resistance
-- **inhA** – also related to isoniazid resistance
-- **rpoB** – associated with rifampicin resistance
 
-## 📁 Files in This Project
-- `katG.fasta.txt`, `inhA.fasta.txt`, `rpoB.fasta.txt` – input gene sequences
-- `codon_usage_analysis_tb_genes.ipynb` – main Jupyter Notebook
-- `katG_codon_usage.csv`, etc. – codon frequency data
-- `katG_codon_usage.png`, etc. – codon usage plots
+| Gene  | Function                               | Resistance Type     |
+|-------|----------------------------------------|---------------------|
+| katG  | Catalase-peroxidase                    | Isoniazid resistance |
+| rpoB  | RNA polymerase beta subunit            | Rifampicin resistance |
+| inhA  | NADH-dependent enoyl-ACP reductase     | Isoniazid resistance |
 
-## 📊 Output
-- **Bar plots** showing the frequency of each codon used per gene
-- **CSV tables** of codon frequencies
+---
 
-## 🧰 Tools & Technologies
-- Python
-- Biopython
+## 📁 Project Files
+
+- `katG.fasta.txt`, `rpoB.fasta.txt`, `inhA.fasta.txt` – Input FASTA files
+- `tb-codon-usage-analysis.ipynb` – Main Jupyter notebook
+- `*.csv` files – Codon frequency tables for each gene
+- `*.png` files – Codon usage bar plots for each gene
+
+---
+
+## 📊 Features
+
+- Parses input FASTA files using Biopython
+- Calculates codon frequency per gene
+- Plots codon usage as bar charts
+- Saves both CSV and PNG outputs automatically
+
+---
+
+## 🛠️ Tools & Libraries
+
+- Python 3
+- [Biopython](https://biopython.org/)
 - Matplotlib
 - Pandas
 
-## 🧠 Skills Demonstrated
-- Sequence parsing and analysis
-- Codon-level frequency calculation
-- Visualization with Matplotlib
-- Automation for multi-gene analysis
-
-## 🚀 How to Run
-1. Install required packages: `biopython`, `pandas`, `matplotlib`
-2. Run the Jupyter notebook `codon_usage_analysis_tb_genes.ipynb`
-
----
+To install the required packages:
+```bash
+pip install biopython matplotlib pandas
